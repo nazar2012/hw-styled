@@ -6,9 +6,9 @@ function List() {
     return (
         <>
             <ListSt>
-                {events.map(({ id, name, location, speaker, type, start }) => {
+                {events.map(({ id, name, location, speaker, type, time: { start, end } }) => {
                     return (
-                        <Item key={id} name={name} location={location} speaker={speaker} type={type} start={start}/>
+                        <Item key={id} name={name} location={location} speaker={speaker} type={type} start={start} end={end} />
                     )
                 })}
             </ListSt>
